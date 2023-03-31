@@ -6,7 +6,6 @@ def clientes(request):
     context={
         "titulo":"Clientes",
         #en la clave clientes voy a llamar mi modelo y aplicar el all() para traerme todos los valores
-        #importante, poner el nombre de las clases/modelos con la primera letra en mayuscula pq las funciones de las vistas no pueden llamarse igual a los modelos
         "clientes":Clientes.objects.all(),
         }
     return render(request,"clientes.html",context)
